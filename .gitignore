@@ -1,5 +1,7 @@
+venv
 venv_first_project
 *.pyc
 __pycache__
 db.sqlite3
 .DS_Store
+.idea

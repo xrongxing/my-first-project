@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -19,6 +20,7 @@ from polls import urls as polls_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include(polls_urls)),
+    # 两个url正则同时引用一个app的urls，python manage.py check报警 ?: (urls.W005) URL namespace 'polls' isn't unique. You may not be able to reverse all URLs in this namespace
+    #url(r'', include(polls_urls)),
     url(r'^polls/', include('polls.urls')),
 ]
